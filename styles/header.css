@@ -1,0 +1,117 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  height: 50px;
+  background-color: #3d3d3d;
+  width: 100%;
+  position: relative;
+}
+
+#logo {
+  position: absolute;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+}
+
+.navToggle:checked ~ nav {
+  display: block;
+}
+
+.navToggle-label:hover {
+  cursor: pointer;
+}
+
+.navToggle {
+  display: none;
+}
+
+.navToggle-label {
+  position: absolute;
+  top: 1;
+  right: 0;
+  margin-right: 1.5em;
+  margin-top: 1.5em;
+}
+
+.navToggle-label span,
+.navToggle-label span::before,
+.navToggle-label span::after {
+  display: block;
+  background: #fff;
+  height: 3px;
+  width: 2em;
+  position: relative;
+}
+
+.navToggle-label span::before,
+.navToggle-label span::after {
+  content: "";
+}
+
+.navToggle-label span::before {
+  bottom: 7px;
+}
+
+.navToggle-label span::after {
+  top: 4px;
+}
+
+nav a {
+  font-size: 20px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: #3d3d3d;
+  color: #fff;
+}
+
+nav {
+  display: none;
+  margin-top: 2em;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+}
+.current {
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  #logo {
+    font-size: 38px;
+    margin-top: 15px;
+    text-align: left;
+  }
+  .navToggle-label {
+    display: none;
+  }
+  nav {
+    display: inline;
+    text-align: right;
+    margin-right: 1%;
+    position: relative;
+  }
+  nav a {
+    font-size: 24px;
+    display: inline;
+    margin-right: 20px;
+  }
+
+  li {
+    display: inline;
+  }
+
+  header {
+    height: 90px;
+  }
+}
