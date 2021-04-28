@@ -1,17 +1,73 @@
 body {
   background-color: #3d3d3d;
+  width: 100%;
+  margin: 0;
 }
 
+#putterImg {
+  background: url(../images/testheader.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  height: 300px;
+  width: 100%;
+  z-index: -1;
+}
 h1 {
-    color: #fff;
-    text-align: center;
+  color: #fff;
+  text-align: center;
 }
 
 img {
-    width: 100%;
+  width: 100%;
+}
+
+.blogContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.latestBlog {
+  background-color: #fff;
+  height: 100%;
 }
 
 @media screen and (min-width: 768px) {
+  #putterImg {
+    height: 400px;
+  }
 
+  .blogContainer {
+    grid-template-columns: 0.5fr 5fr 5fr 5fr 0.5fr;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-column-gap: 40px;
+    max-width: 1300px;
+  }
+
+  h2 {
+    font-weight: normal;
+    font-size: 18px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 30px;
+  }
+  .arrow {
+    font-size: 70px;
+    color: white;
+    position: relative;
+    margin: auto;
+  }
+  #leftArrow {
+    text-align: right;
   }
 }
