@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+  </head>
+  <body>
+    <header>
+      <div id="logo">The Golf Blog</div>
+      <input type="checkbox" id="navToggle" class="navToggle" onclick="" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="current">Contact</a></li>
+        </ul>
+      </nav>
+      <label for="navToggle" class="navToggle-label">
+        <span></span>
+      </label>
+    </header>
+    <main>
+      <div id="contactSquare">
+        <h1>Contact Us</h1>
+        <h2 id="success">Thank you for your message!</h2>
+        <form id="contactForm">
+          <div>
+            <label>
+              <p>Name</p>
+              <input name="name" id="name" placeholder="Min. 5 characters" />
+            </label>
+            <div class="formError" id="nameError">Please enter your name</div>
+          </div>
+          <div>
+            <label>
+              <p>Email</p>
+              <input name="Email" id="email" placeholder="Enter valid email" />
+            </label>
+            <div class="formError" id="emailError">
+              Please enter a valid email
+            </div>
+          </div>
+          <div>
+            <label>
+              <p>Subject</p>
+              <input
+                name="text"
+                id="subject"
+                placeholder="Min. 15 characters"
+              />
+            </label>
+            <div class="formError" id="subjectError">
+              Must contain at least 15 characters
+            </div>
+          </div>
+          <div>
+            <label for="message"><p>Message</p></label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Min. 25 characters"
+            ></textarea>
+            <div class="formError" id="messageError">
+              Must contain at least 25 characters
+            </div>
+          </div>
+          <button>Send Message</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,5 +1,7 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%;
+  margin: 0;
 }
 
 header {
@@ -14,7 +16,7 @@ header {
   color: #fff;
   font-weight: bold;
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   width: 100%;
 }
@@ -65,7 +67,7 @@ header {
 }
 
 nav a {
-  font-size: 20px;
+  font-size: 18px;
   padding: 10px;
   display: block;
   text-align: center;
@@ -76,7 +78,7 @@ nav a {
 }
 
 li a:hover {
-  background-color: black;
+  background-color: #3d4d4d;
 }
 
 nav {
@@ -99,8 +101,10 @@ ul {
 @media screen and (min-width: 768px) {
   #logo {
     font-size: 38px;
-    margin-top: 15px;
+    margin-top: 18px;
     text-align: left;
+    margin-left: 3%;
+    width: 40%;
   }
   .navToggle-label {
     display: none;
@@ -114,7 +118,7 @@ ul {
   nav a {
     font-size: 24px;
     display: inline;
-    margin-right: 20px;
+    margin-right: 18px;
     margin-left: 0px;
   }
 
