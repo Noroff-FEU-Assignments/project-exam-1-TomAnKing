@@ -17,7 +17,8 @@ async function displayPosts(start, end) {
         <p class="title">${post.title}</p>
         <p class="date">${post.author}${post.date}</p>
         <p class="readMore">Read More</p>
-      </div>`;
+      </div>
+      </a>`;
     });
   } catch (error) {
     console.log("An error occured");

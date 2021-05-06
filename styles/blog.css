@@ -9,14 +9,14 @@ h1 {
   max-width: 90%;
   margin: auto;
   margin-top: 5%;
-  position: relative;
-  z-index: -1;
 }
 
 .post {
   position: relative;
   border-top: #3d3d3d solid 1px;
   height: 140px;
+  position: relative;
+  z-index: -1;
 }
 
 #image {
