@@ -42,7 +42,7 @@ h1 {
 
 .readMore {
   color: #3d3d3d;
-  font-size: 14px;
+  font-size: 12px;
   text-decoration: underline;
   margin-right: 1%;
   position: absolute;
@@ -78,12 +78,13 @@ a {
 
   #image {
     height: 200px;
+    margin-top: 10px;
   }
 
   .title {
     font-size: 28px;
     margin-left: 340px;
-    margin-top: 1%;
+    margin-top: 2%;
   }
 
   .date {
