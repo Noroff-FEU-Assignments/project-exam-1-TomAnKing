@@ -2,16 +2,20 @@ const url = "https://www.tomanking.one/wp-json/wp/v2/posts/?per_page=12";
 
 const blogContainer = document.querySelector(".blogContainer");
 
+const moreButton = document.querySelector(".moreButton");
+
+let article;
+
 async function displayPosts(start, end) {
   try {
     const response = await fetch(url);
 
-    const content = await response.json();
+    articles = await response.json();
 
-    let posts = getPosts(content, start, end);
+    const posts = getPosts(articles, start, end);
 
     posts.forEach((post) => {
-      blogContainer.innerHTML += `<a href="blogDetail.html">
+      blogContainer.innerHTML += `<a href="test.html?id=${post.id}">
       <div class="post">
         <img id="image" src="${post.img}" alt="" />
         <p class="title">${post.title}</p>
@@ -25,25 +29,28 @@ async function displayPosts(start, end) {
   }
 }
 
-function getPosts(content, start, end) {
+function getPosts(articles, start, end) {
   const posts = [];
 
   for (let i = start; i <= end; i++) {
-    const sections = content[i].content.rendered.split("#");
+    const sections = articles[i].content.rendered.split("#");
     let post = {};
-    for (let j = 0; j < sections.length; j++) {
-      post = {
-        title: content[i].title.rendered,
-        body: sections[0],
-        author: sections[1],
-        date: sections[2],
-        img: content[i].better_featured_image.source_url,
-      };
-    }
+    post = {
+      id: articles[i].id,
+      title: articles[i].title.rendered,
+      body: sections[0],
+      author: sections[1],
+      date: sections[2],
+      img: articles[i].better_featured_image.source_url,
+    };
     posts.push(post);
   }
-
   return posts;
 }
 
-displayPosts(0, 11);
+moreButton.addEventListener("click", () => {
+  displayPosts(7, articles.length - 1);
+  moreButton.style.display = "none";
+});
+
+displayPosts(0, 6);
