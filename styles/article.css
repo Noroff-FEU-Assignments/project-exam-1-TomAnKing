@@ -1,6 +1,7 @@
 .blogPost {
   width: 85%;
   margin: auto;
+  margin-bottom: 5%;
 }
 
 img {
@@ -30,6 +31,19 @@ h1 {
 p {
   font-size: 12px;
   color: #3d3d3d;
+  margin-bottom: 1%;
+}
+
+.author {
+  font-size: 13px;
+  margin-bottom: 1%;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 13px;
+  margin-top: 0;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {
@@ -51,5 +65,13 @@ p {
 
   #backButton span {
     font-size: 20px;
+  }
+
+  .author {
+    font-size: 22px;
+  }
+
+  .date {
+    font-size: 22px;
   }
 }

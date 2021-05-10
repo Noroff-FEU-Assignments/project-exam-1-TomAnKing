@@ -15,7 +15,7 @@ async function displayPosts(start, end) {
     const posts = getPosts(articles, start, end);
 
     posts.forEach((post) => {
-      blogContainer.innerHTML += `<a href="test.html?id=${post.id}">
+      blogContainer.innerHTML += `<a href="article.html?id=${post.id}">
       <div class="post">
         <img id="image" src="${post.img}" alt="" />
         <p class="title">${post.title}</p>

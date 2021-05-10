@@ -18,7 +18,17 @@ async function fetchPost() {
 
     const post = getPost(article);
 
-    blogDetail.innerHTML = `<h1>${post.title}</h1>`;
+    blogDetail.innerHTML = `<div id="backButton">
+                            <p>
+                              <a href="blog.html"><b>Blog ></b></a>
+                              <span>${post.title}</span>
+                            </p>
+                            </div>
+                            <img src="${post.img}" alt="" />
+                            <h1>${post.title}</h1>
+                            <p class="author">${post.author}</p>
+                            <p class="date">${post.date}</p>
+                            <p>${post.body}</p>`;
   } catch (error) {
     console.log("error");
   }
