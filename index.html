@@ -27,25 +27,13 @@
     <main>
       <div id="putterImg"></div>
       <h1>Latest Posts</h1>
+      <div class="loader">test</div>
       <div class="blogContainer">
-        <div class="arrow" id="leftArrow"><</div>
-        <div class="latestBlog">
-          <img src="images/pebblebeach.jpg" alt="" />
-          <h2>Outdrive your friends with these simple techniques</h2>
-          <p>Read More</p>
-        </div>
-        <div class="latestBlog">
-          <img src="images/courtney-cook-SsIIw_MET0E-unsplash.jpg" alt="" />
-          <h2>Outdrive your friends with these simple techniques</h2>
-          <p>Read More</p>
-        </div>
-        <div class="latestBlog">
-          <img src="images/courtney-cook-SsIIw_MET0E-unsplash.jpg" alt="" />
-          <h2>Outdrive your friends with these simple techniques</h2>
-          <p>Read More</p>
-        </div>
-        <div class="arrow" id="rightArrow">></div>
+        <div class="arrow" id="leftArrow" onclick="prev()"><</div>
+        <div class="blogCards"></div>
+        <div class="arrow" id="rightArrow" onclick="next()">></div>
       </div>
     </main>
+    <script src="JS/index.js"></script>
   </body>
 </html>

@@ -4,29 +4,38 @@ const blogContainer = document.querySelector(".blogContainer");
 
 const moreButton = document.querySelector(".moreButton");
 
-let article;
+let articles;
 
-async function displayPosts(start, end) {
+displayPosts(0, 6);
+
+moreButton.addEventListener("click", () => {
+  build(7, articles.length - 1);
+  moreButton.style.display = "none";
+});
+
+async function displayPosts() {
   try {
     const response = await fetch(url);
-
     articles = await response.json();
-
-    const posts = getPosts(articles, start, end);
-
-    posts.forEach((post) => {
-      blogContainer.innerHTML += `<a href="article.html?id=${post.id}">
-      <div class="post">
-        <img id="image" src="${post.img}" alt="" />
-        <p class="title">${post.title}</p>
-        <p class="date">${post.author}${post.date}</p>
-        <p class="readMore">Read More</p>
-      </div>
-      </a>`;
-    });
+    blogContainer.innerHTML = "";
+    build(0, 6);
   } catch (error) {
     console.log("An error occured");
   }
+}
+
+function build(start, end) {
+  const posts = getPosts(articles, start, end);
+  posts.forEach((post) => {
+    blogContainer.innerHTML += `<a href="article.html?id=${post.id}">
+    <div class="post">
+      <img id="image" src="${post.img}" alt="" />
+      <p class="title">${post.title}</p>
+      <p class="date">${post.author}${post.date}</p>
+      <p class="readMore">Read More</p>
+    </div>
+    </a>`;
+  });
 }
 
 function getPosts(articles, start, end) {
@@ -47,10 +56,3 @@ function getPosts(articles, start, end) {
   }
   return posts;
 }
-
-moreButton.addEventListener("click", () => {
-  displayPosts(7, articles.length - 1);
-  moreButton.style.display = "none";
-});
-
-displayPosts(0, 6);

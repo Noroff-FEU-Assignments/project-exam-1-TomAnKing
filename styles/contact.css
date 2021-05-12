@@ -61,11 +61,12 @@ button {
   margin-top: 5%;
   margin-bottom: 15%;
   font-size: 14px;
-  width: 150px;
   width: 35%;
-  margin-left: 54%;
+  margin-left: 32.5%;
   height: 30px;
-  border: solid 1px #3d3d3d;
+  border: none;
+  color: #fff;
+  background-color: #3d3d3d;
 }
 
 button:hover {

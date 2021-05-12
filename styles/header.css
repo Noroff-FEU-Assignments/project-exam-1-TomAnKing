@@ -103,7 +103,7 @@ ul {
 @media screen and (min-width: 768px) {
   #logo {
     font-size: 38px;
-    margin-top: 18px;
+    margin-top: 8px;
     text-align: left;
     margin-left: 3%;
     width: auto;
@@ -113,12 +113,12 @@ ul {
   }
   nav {
     display: inline;
-    text-align: right;
+    text-align: end;
     margin-right: 1%;
     position: relative;
   }
   nav a {
-    font-size: 24px;
+    font-size: 22px;
     display: inline;
     margin-right: 18px;
     margin-left: 0px;
@@ -129,7 +129,7 @@ ul {
   }
 
   header {
-    height: 90px;
+    height: 70px;
   }
   li a:hover {
     background-color: #3d3d3d;

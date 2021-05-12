@@ -11,6 +11,10 @@ img {
   margin: auto;
 }
 
+img:hover {
+  cursor: pointer;
+}
+
 #backButton span {
   font-style: italic;
   color: #3d3d3d;
@@ -46,6 +50,58 @@ p {
   font-weight: bold;
 }
 
+.modalImg {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modalImg:hover {
+  cursor: pointer;
+}
+
+.modalImg img {
+  margin-top: 95px;
+}
+
+.modalImg img:hover {
+  cursor: initial;
+  opacity: inherit;
+}
+
+.closeModal {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.closeModal:hover {
+  cursor: pointer;
+  color: #3d3d3d;
+}
+
+.description {
+  color: #fff;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+}
+
+.description:hover {
+  cursor: initial;
+}
+
+img:hover {
+  opacity: 0.9;
+}
+
 @media screen and (min-width: 768px) {
   .blogPost {
     max-width: 900px;
@@ -73,5 +129,24 @@ p {
 
   .date {
     font-size: 22px;
+  }
+
+  .modalImg img {
+    width: 60%;
+    height: auto;
+    margin-top: 85px;
+  }
+
+  .closeModal {
+    top: 3%;
+    right: 17%;
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 26px;
+    margin-left: 20%;
+    text-align: left;
+    max-width: 60%;
   }
 }
