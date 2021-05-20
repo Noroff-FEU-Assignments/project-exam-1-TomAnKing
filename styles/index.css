@@ -13,6 +13,7 @@ body {
   width: 100%;
   z-index: -1;
 }
+
 h1 {
   color: #fff;
   text-align: center;
@@ -26,15 +27,16 @@ img {
 .blogContainer {
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
-  height: 400px;
+  height: 32vh;
+  margin-top: 20px;
 }
 
 .blogCards {
   display: grid;
   grid-template-columns: 1fr;
-  width: 70%;
+  width: 90%;
   height: 100%;
-  margin-left: 15%;
+  margin-left: 5%;
 }
 
 .latestBlog {
@@ -73,13 +75,35 @@ h2 {
 
 p {
   text-align: center;
-  margin-bottom: 30px;
   text-decoration: underline;
   color: #3d3d3d;
+  font-size: 14px;
 }
 
 .latestBlog {
   width: 100%;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -95,7 +119,7 @@ p {
     grid-column-gap: 40px;
     max-width: 1600px;
     margin-bottom: 200px;
-    height: 50vh;
+    height: 40vh;
   }
 
   .blogCards {
@@ -126,10 +150,11 @@ p {
   }
 
   p {
+    font-size: 16px;
     text-align: center;
-    margin-bottom: 30px;
     text-decoration: underline;
     color: #3d3d3d;
+    bottom: 5%;
   }
   .arrow {
     font-size: 70px;
@@ -149,5 +174,22 @@ p {
 
   #rightArrow {
     margin-right: 50px;
+  }
+
+  .loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #3498db;
+    width: 60px;
+    height: 60px;
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 1150px) and (min-width: 769px) {
+  .blogCards {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
   }
 }

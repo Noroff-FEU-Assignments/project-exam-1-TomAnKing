@@ -15,7 +15,7 @@ async function displayPosts() {
   try {
     const response = await fetch(url);
     articles = await response.json();
-    loader.innerHTML = "";
+    loader.style.display = "none";
     build();
   } catch (error) {
     console.log("An error occured");
