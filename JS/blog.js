@@ -29,7 +29,7 @@ function build(start, end) {
   posts.forEach((post) => {
     blogContainer.innerHTML += `<a href="article.html?id=${post.id}">
     <div class="post">
-      <img id="image" src="${post.img}" alt="${post.title}" />
+      <img id="image" src="${post.img}" alt="${post.imgAlt}" />
       <p class="title">${post.title}</p>
       <p class="date">${post.author}${post.date}</p>
       <p class="readMore">Read More</p>
@@ -51,6 +51,7 @@ function getPosts(articles, start, end) {
       author: sections[1],
       date: sections[2],
       img: articles[i].better_featured_image.source_url,
+      imgAlt: articles[i].better_featured_image.alt_text,
     };
     posts.push(post);
   }

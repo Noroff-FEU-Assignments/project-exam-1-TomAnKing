@@ -30,7 +30,7 @@ function build() {
   posts.forEach((post) => {
     blogCards.innerHTML += `<div class="latestBlog">
     <a href="article.html?id=${post.id}">
-    <img src="${post.img}" alt="" />
+    <img src="${post.img}" alt="${post.imgAlt}" />
     <h2>${post.title}</h2>
     <p>Read More</p>
     </a>
@@ -50,6 +50,7 @@ function getPosts() {
       author: sections[1],
       date: sections[2],
       img: articles[i].better_featured_image.source_url,
+      imgAlt: articles[i].better_featured_image.alt_text,
     };
     posts.push(post);
   }
