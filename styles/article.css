@@ -158,11 +158,11 @@ img:hover {
   .modalImg img {
     width: 60%;
     height: auto;
-    margin-top: 85px;
+    margin-top: 45px;
   }
 
   .closeModal {
-    top: 3%;
+    top: 2%;
     right: 17%;
     font-size: 40px;
   }
