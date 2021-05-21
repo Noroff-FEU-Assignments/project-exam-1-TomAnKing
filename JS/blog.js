@@ -29,7 +29,7 @@ function build(start, end) {
   posts.forEach((post) => {
     blogContainer.innerHTML += `<a href="article.html?id=${post.id}">
     <div class="post">
-      <img id="image" src="${post.img}" alt="" />
+      <img id="image" src="${post.img}" alt="${post.title}" />
       <p class="title">${post.title}</p>
       <p class="date">${post.author}${post.date}</p>
       <p class="readMore">Read More</p>

@@ -27,7 +27,7 @@ async function fetchPost() {
     </p>
     </div>
     <div class="articleImg" onclick="openModal()">
-    <img id="openModal" src="${post.img}" alt="" />
+    <img id="openModal" src="${post.img}" alt="${post.title}" />
     </div>
     <h1>${post.title}</h1>
     <p class="author">${post.author}</p>
