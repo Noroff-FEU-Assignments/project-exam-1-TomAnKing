@@ -19,6 +19,7 @@ async function fetchPost() {
     const article = await response.json();
 
     const post = getPost(article);
+    document.title += ` ${post.title}`;
     blogDetail.innerHTML = "";
     blogDetail.innerHTML = `<div id="backButton">
     <p>
