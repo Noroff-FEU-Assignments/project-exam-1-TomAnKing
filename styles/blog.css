@@ -92,11 +92,8 @@ button {
 }
 
 button:hover {
-  opacity: 0.9;
-}
-
-button:hover {
   cursor: pointer;
+  opacity: 0.9;
 }
 
 @media screen and (min-width: 768px) {
