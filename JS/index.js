@@ -11,7 +11,10 @@ let end = start + jump;
 let articles;
 let posts = [];
 
-async function displayPosts() {
+fetchPosts();
+
+// fetct articles from api
+async function fetchPosts() {
   try {
     const response = await fetch(url);
     articles = await response.json();
@@ -22,8 +25,7 @@ async function displayPosts() {
   }
 }
 
-displayPosts();
-
+// build html
 function build() {
   posts = getPosts();
   blogCards.innerHTML = "";
@@ -38,6 +40,7 @@ function build() {
   });
 }
 
+// gets the correct posts(based on start and end) and formats each post into an object.
 function getPosts() {
   const posts = [];
   for (let i = start; i <= end; i++) {
@@ -57,6 +60,7 @@ function getPosts() {
   return posts;
 }
 
+// shows how many posts to display
 window.addEventListener("resize", function (event) {
   jump = getJump();
   end = start + jump;
@@ -71,6 +75,7 @@ window.addEventListener("resize", function (event) {
   build();
 });
 
+// show next posts
 function next() {
   end += jump + 1;
   start = end - jump;
@@ -81,6 +86,7 @@ function next() {
   build();
 }
 
+// show prev posts
 function prev() {
   start -= jump + 1;
   end = start + jump;
@@ -91,6 +97,7 @@ function prev() {
   build();
 }
 
+// sets jump based on browser width
 function getJump() {
   let jump;
   if (window.innerWidth >= 1150) {

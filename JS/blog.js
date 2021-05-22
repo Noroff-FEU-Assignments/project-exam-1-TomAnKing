@@ -6,14 +6,10 @@ const moreButton = document.querySelector(".moreButton");
 
 let articles;
 
-displayPosts(0, 6);
+fetchPosts(0, 6);
 
-moreButton.addEventListener("click", () => {
-  build(7, articles.length - 1);
-  moreButton.style.display = "none";
-});
-
-async function displayPosts() {
+//  fetct articles from api
+async function fetchPosts() {
   try {
     const response = await fetch(url);
     articles = await response.json();
@@ -24,20 +20,22 @@ async function displayPosts() {
   }
 }
 
+// build html
 function build(start, end) {
   const posts = getPosts(articles, start, end);
   posts.forEach((post) => {
     blogContainer.innerHTML += `<a href="article.html?id=${post.id}">
     <div class="post">
-      <img id="image" src="${post.img}" alt="${post.imgAlt}" />
-      <p class="title">${post.title}</p>
-      <p class="date">${post.author}${post.date}</p>
-      <p class="readMore">Read More</p>
+    <img id="image" src="${post.img}" alt="${post.imgAlt}" />
+    <p class="title">${post.title}</p>
+    <p class="date">${post.author}${post.date}</p>
+    <p class="readMore">Read More</p>
     </div>
     </a>`;
   });
 }
 
+// gets the correct posts(based on start and end) and formats each post into an object.
 function getPosts(articles, start, end) {
   const posts = [];
 
@@ -57,3 +55,9 @@ function getPosts(articles, start, end) {
   }
   return posts;
 }
+
+// show the remaning articles
+moreButton.addEventListener("click", () => {
+  build(7, articles.length - 1);
+  moreButton.style.display = "none";
+});
